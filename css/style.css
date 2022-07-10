@@ -15,17 +15,22 @@ a{
 }
 /*navbar*/
 .navbar{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #ccc;
-    padding:0 20px;
+    background-color: white;
 }
 .navbar_logo{
-    font-size: 24px;
-}
-.navbar_logo i{
-    color: var(--accent-color);
+    width: 150px;
+    height: 28px;
+    background: url('../images/logo.png') no-repeat 0 0;
+    background-size: contain;
+    margin-left: 16px;
 }
 .navbar_menu{
     display: flex;
@@ -41,26 +46,46 @@ a{
 }
 .navbar_toggleBtn{
     position: absolute;
-    top: 12px;
-    right: 16px;
+    top: 14px;
+    right:16px;
     display: none;
 }
+/* picture */
+.picture{
+    margin-top: 49px;
+    width: 100%;
+    height: 40vh;
+    background:url('../images/picture5.jpg') no-repeat 0 0;
+    background-size: cover;
+}
+/* intro */
 .intro{
     padding: 0 20px;
 }
 .intro{
-    margin-top: 50px;
+    margin-top: 0px;
 }
 .intro p:first-child{
     margin-top: 6.5vh;
 }
-.intro h4:nth-of-type(1){
-    margin-top: 35px;
-}
 .intro h4:nth-of-type(2){
     color: #C0443E;
 }
-/**/
+.show_images .m1{
+    width: 70%;
+    position: absolute;
+    top: 22%;
+    left: 30%;
+    z-index: 1;
+}
+.show_images .m2{
+    width: 45%;
+}
+.show_images .m3{
+    width: 75%;  
+    margin-top: 4vh;
+    margin-left: 2.5vw;
+}
 /*banner*/
 .banner{
     height: 35vh;
@@ -88,12 +113,12 @@ a{
     padding: 0;
     text-decoration: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 .room_type li{
-    width: 25%;
+    width: 20%;
     text-align: center;
-    border-right: 1px solid black;
+    border-right: 1px solid #C0443E;
 }
 .room_type li:nth-of-type(4){
     border-right: 0px;
@@ -105,6 +130,7 @@ a{
 .room_contents{
     padding: 0 16px;
     position: relative;
+    line-height: 1.5rem;
 }
 .room_contents h5 a{
     color: #C0443E;
@@ -118,11 +144,14 @@ a{
     right: 16px;
     top: 37.5vh;
 }
+.content_2, .content_3, .content_4{
+    display: none;
+}
 /*builind*/
 .building{
     margin: 12.5vh 16px 0px;
     position: relative;
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 .facility ul{
     padding-left: 0px;
@@ -160,8 +189,13 @@ a{
     cursor: pointer;
 }
 /*events*/
-.events{
+.container_event{
     margin-top: 12.5vh;
+    width: 100%;
+    border: 1px solid blue;
+    overflow: hidden;
+}
+.events{
     width: max-content;
     display: flex;
 }
@@ -225,11 +259,11 @@ select{
     font-size: 0.8rem;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:767px) {
     .navbar{
         flex-direction:column;
         align-items: flex-start;
-        padding: 10px 16px;
+        padding: 10px 0px;
     }
     .navbar_menu{
         display: none;
@@ -257,26 +291,30 @@ select{
     .show_images{
         position: relative;
     }
-    .show_images .m1{
-        width: 70%;
-        position: absolute;
-        top: 22%;
-        left: 30%;
-        z-index: 1;
-    }
-    .show_images .m2{
-        width: 45%;
-    }
-    .show_images .m3{
-        width: 75%;  
-        margin-top: 4vh;
-        margin-left: 2.5vw;
-    }
 }
-@media screen and (min-width:769px){
+@media screen and (min-width:768px){
+    .navbar{
+        padding: 20px 0px;
+    }
+    .navbar_logo{
+        width: 215px;
+        height: 40px;
+        margin-left: 20px;
+    }
+    .picture{
+        margin-top: 104px;
+    }
     .room_type ul{
         justify-content: center;
     }
     .room_type ul li{
         width: 15%;
     }
+    .show_images .m1{
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        z-index: 1;
+    }
+}
