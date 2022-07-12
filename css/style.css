@@ -1,10 +1,11 @@
 :root{
     --text-color:rgb(29, 29, 29);
-    --background-color:rgb(226, 226, 226);
+    --background-color:rgb(243, 243, 243);
     --accent-color:rgb(169, 34, 34);
 }
 body{
     margin: 0;
+    font-family:'Apple SD Gothic Neo';
 }
 ul{
     list-style: none;
@@ -54,9 +55,21 @@ a{
 .picture{
     margin-top: 49px;
     width: 100%;
-    height: 40vh;
+    height: 22rem;
     background:url('../images/picture5.jpg') no-repeat 0 0;
     background-size: cover;
+}
+.index_list{
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 16px 0;
+}
+.index_list li{
+    padding-bottom: 2px;
+}
+.index_list li.click{
+    border-bottom: 2px solid #C0443E;
 }
 /* intro */
 .intro{
@@ -71,34 +84,33 @@ a{
 .intro h4:nth-of-type(2){
     color: #C0443E;
 }
-.show_images .m1{
-    width: 70%;
-    position: absolute;
-    top: 22%;
-    left: 30%;
-    z-index: 1;
+.show_images{
+    box-shadow: 0px 0px 30px rgb(90, 90, 90);
 }
-.show_images .m2{
+.show_images.m1{
+    width: 70%;
+}
+.show_images.m2{
     width: 45%;
 }
-.show_images .m3{
-    width: 75%;  
-    margin-top: 4vh;
-    margin-left: 2.5vw;
+.show_images.m3{
+    width: 75%; 
 }
 /*banner*/
 .banner{
-    height: 35vh;
-    margin-top: 15vh;
+    height: 17.5rem;
+    margin-top: 6rem;
+    background: url('../images/history.jpg')no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
     text-align: center;
-    background-color: #ccc;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .banner h4{
-    text-shadow: 1px 1px 4px rgb(72, 72, 72);
+    text-shadow: 2px 2px 2px rgb(66, 66, 66);
 }
 .banner h4 a{
     color: white;
@@ -106,16 +118,18 @@ a{
 /*room_type*/
 .room_type{
     position: relative;
+    padding: 1.5rem 0 3rem;
+    background-color: #fffdf0;
 }
 .room_type ul{
-    margin-top: 8vh;
+    margin: 5rem 0 1.5rem;
     list-style: none;
     padding: 0;
     text-decoration: none;
     display: flex;
     justify-content: center;
 }
-.room_type li{
+.room_type ul li{
     width: 20%;
     text-align: center;
     border-right: 1px solid #C0443E;
@@ -137,52 +151,73 @@ a{
 }
 .room_contents img{
     width: 100%;
-    height: 37.5vh;
+    height: 19rem;
+}
+.room_contents h4:nth-of-type(1){
+    float: left;
+    width: 50%;
 }
 .view{
-    position: absolute;
-    right: 16px;
-    top: 37.5vh;
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+.view a{
+    color: #C0443E;
+}
+.room_contents p{
+    clear: both;
+    padding-top: 1.5rem;
 }
 .content_2, .content_3, .content_4{
     display: none;
 }
 /*builind*/
 .building{
-    margin: 12.5vh 16px 0px;
-    position: relative;
+    margin: 6rem 16px 0px;
     overflow: hidden;
 }
+.fac_box,.din_box{
+    position: relative;
+}
 .facility ul{
+    margin: 0;
     padding-left: 0px;
     display: flex;
     width: 300%;
 }
+.dining{
+    padding-bottom: 6rem;
+    border-bottom: 1px solid #b3b3b3;
+}
 .dining ul{
+    margin: 0;
     padding-left: 0px;
     display: flex;
     width: 400%;
 }
 .building li{
     width: 100%;
+    height: 19rem;
 }
 .building li img{
     width: 100%;
-    height: 37.5vh;
+    height: 19rem;
 }
 .building div{
     text-align: center;
 }
 .leftArrow{
     position: absolute;
-    top: 18vh;
+    top: 9rem;
+    left: 0;
 }
 .leftArrow:hover{
     cursor: pointer;
 }
 .rightArrow{
     position: absolute;
-    top: 18vh;
+    top: 9rem;
     right: 0;
 }
 .rightArrow:hover{
@@ -190,19 +225,20 @@ a{
 }
 /*events*/
 .container_event{
-    margin-top: 12.5vh;
+    margin-top: 2rem;
     width: 100%;
-    border: 1px solid blue;
-    overflow: hidden;
+    /* border: 1px solid blue; */
+    /* overflow: hidden; */
 }
 .events{
-    width: max-content;
+    width: 200%;
+    /* border: 1px solid red; */
     display: flex;
+    justify-content: space-between;
 }
 .eachEvent{
-    width: 14.5rem;
+    width: 32%;
     height: 22rem;
-    /* position: relative; */
     display: flex;
     align-items: flex-end;
 }
@@ -219,7 +255,6 @@ a{
     background-size: cover;
 }
 .eachEvent div{
-    /* position: absolute; */
     width: 100%;
     bottom: 0;
     background-color:rgba(0, 0, 0, 0.4);
@@ -230,7 +265,6 @@ a{
 }
 /*footer*/
 footer{
-    margin-top: 12.5vh;
     padding: 40px 16px;
     border-top: 1px solid #ccc;
 }
@@ -258,7 +292,7 @@ select{
 .footer_end ul li a{
     font-size: 0.8rem;
 }
-
+/* 폰 가로,세로 */
 @media screen and (max-width:767px) {
     .navbar{
         flex-direction:column;
@@ -285,16 +319,34 @@ select{
     .navbar_menu.active{
         display: flex;
     }
+    .index_list{
+        display: none;
+    }
     .intro{
         padding: 0 16px;
     }
-    .show_images{
+    .showcase_images{
+        width: 100%;
         position: relative;
     }
+    .show_images.m1{
+        position: absolute;
+        z-index: 1;
+        top: 22%;
+        left: 30%;
+    }
+    .show_images.m3{
+        margin-top: 2rem;
+        margin-left: 2.5vw;
+    }
 }
+/* 아이패드 세로 */
 @media screen and (min-width:768px){
     .navbar{
-        padding: 20px 0px;
+        padding: 5px 0;
+    }
+    .navbar_menu li{
+        margin: 0px 5px;
     }
     .navbar_logo{
         width: 215px;
@@ -302,19 +354,140 @@ select{
         margin-left: 20px;
     }
     .picture{
-        margin-top: 104px;
+        margin-top: 75px;
+    }
+    .index_list{
+        border-bottom: 1px solid #b3b3b3;
+    }
+    .intro{
+        height: 30rem;
+    }
+    .welcome{
+        width: 40%;
+        height: 100%; 
+        float: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .welcome h4:nth-of-type(1){
+        margin-top: 8vh;
+    }
+    .showcase_images{
+        width: 58%;
+        height: 100%;
+        position: relative;
+    }
+    .show_images.m1{
+        width: 52%;
+        position: absolute;
+        top: 17vh;
+        z-index: 1;
+    }
+    .show_images.m2{
+        width: 40%;
+        position: absolute;
+        bottom: 0;
+        left: 12rem;
+        z-index: 2;
+    }
+    .show_images.m3{
+        width: 48%;
+        position: absolute;
+        top: 7vh;
+        right: 1rem;
+    }
+    .intro::after{
+        content: "";
+        display: block;
+        clear: both;
     }
     .room_type ul{
         justify-content: center;
     }
-    .room_type ul li{
-        width: 15%;
+    .room_contents img{
+        height: 28rem;
     }
-    .show_images .m1{
-        width: 70%;
-        position: absolute;
-        top: 70%;
-        left: 30%;
-        z-index: 1;
+    .room_type ul li{
+        width: 12%;
+    }
+    .room_type li a{
+        font-size: 1rem;
+    }
+    .building{
+        display: flex;
+    }
+    .facility{
+        flex-direction: row;
+    }
+    .dining{
+        flex-direction: row-reverse;
+        
+        margin-top: 0;
+    }
+   .buildBox{
+        width: 50%;
+        overflow: hidden;
+    }
+    .fac_box{
+        margin-right: 5%;
+    }
+    .buildInfo{
+        width:45%;
+        position: relative;
+    }
+    .building div:nth-of-type(2){
+        text-align: left;
+    }
+    .buildInfo h4{
+        margin: 3rem 0;
+    }
+    .buildInfo p{
+        margin-left: 1em;
+    }
+    .building p::before{
+        content: url('../images/line.png');
+        margin-right: 5%;
+        position: relative;
+        bottom: 0.2rem;
+    }
+    .events{
+        width: auto;
+        justify-content: space-between;
+    }
+    .container_event {
+        margin: 2rem 16px;
+        width: auto;
+    }
+    footer{
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer_info{
+        width: 60%;
+    }
+    select{
+        margin-top: 0;
+    }
+    .footer_end ul{
+        flex-direction: column;
+        border-left: 1px solid #000000;
+    }
+    .footer_end ul li{
+        margin: 1rem;
+    }
+    .footer_end ul li a{
+        font-size: 1rem;
+    }
+/* 아이패드 가로 */
+@media screen and (min-width:1200px){
+    .intro{
+        height: 35rem;
+    }
+    .banner{
+        margin-top: 12rem;
+    }
+    .picture{
+        height: 32rem;
     }
 }
