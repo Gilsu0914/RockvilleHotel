@@ -9,6 +9,9 @@ toggleBtn.addEventListener(`click`, ()=>{
 
 
 
+
+
+
 const deluxClass = document.querySelector(".delux");
 const suiteClass = document.querySelector(".suite");
 const familyClass = document.querySelector(".family");
@@ -20,7 +23,6 @@ const hideImage = () => {
     familyClass.classList.remove('visible')
     presidentialClass.classList.remove('visible')
 }
-
 
 const deluxBtn = document.getElementById("deluxBtn");
 const suiteBtn = document.getElementById("suiteBtn");
@@ -45,4 +47,37 @@ familyBtn.addEventListener('click', () => {
 presidentialBtn.addEventListener('click', () => {
     hideImage()
     presidentialClass.classList.add('visible')
+});
+
+
+
+document.querySelector(`.button2`).addEventListener(`click`,()=>{
+    document.querySelector(`.container`).style.transform = `translate(-33.3%)`;
+});
+
+document.querySelector(`.button3`).addEventListener(`click`,()=>{
+    document.querySelector(`.container`).style.transform = `translate(-66.6%)`;
+});
+
+document.querySelector(`.button1`).addEventListener(`click`,()=>{
+    document.querySelector(`.container`).style.transform = `translate(0vw)`;
+});
+
+
+
+
+document.querySelector(`.button22`).addEventListener(`click`,()=>{
+    document.querySelector(`.container2`).style.transform = `translate(-25%)`;
+});
+
+document.querySelector(`.button33`).addEventListener(`click`,()=>{
+    document.querySelector(`.container2`).style.transform = `translate(-50%)`;
+});
+
+document.querySelector(`.button44`).addEventListener(`click`,()=>{
+    document.querySelector(`.container2`).style.transform = `translate(-75%)`;
+});
+
+document.querySelector(`.button11`).addEventListener(`click`,()=>{
+    document.querySelector(`.container2`).style.transform = `translate(0%)`;
 });

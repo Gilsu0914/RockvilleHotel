@@ -3,6 +3,9 @@
     --background-color:rgb(243, 243, 243);
     --accent-color:rgb(169, 34, 34);
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     font-family:'Apple SD Gothic Neo';
@@ -114,6 +117,9 @@ a{
     color: white;
 }
 /*room_type*/
+.building{
+    margin: 0 16px;
+}
 .room_type{
     position: relative;
     padding: 1.5rem 0 3rem;
@@ -168,83 +174,90 @@ a{
     padding-top: 1.5rem;
 }
 .delux, .suite, .family, .presidential{
-    display: none; /*어떻게 해야하지?....*/
+    display: none;
 }
 .visible{
     display: block;
 }
 /*builind*/
-.building{
-    margin: 6rem 16px 0px;
-    overflow: hidden;
-}
 .fac_box,.din_box{
     position: relative;
 }
-.facility ul{
-    margin: 0;
-    padding-left: 0px;
-    display: flex;
+.facility{
+    padding-top: 6rem;
+}
+.container{
     width: 300%;
+    height: 19rem;
+    transition: transform 1s;
+}
+.inner{
+    width: 33.3%;
+    height:19rem;
+    float: left;
+}
+.inner img{
+    width: 100%;
+    height: 19rem;
+}
+.container2{
+    width: 400%;
+    height: 19rem;
+    transition: transform 1s;
+}
+.inner2{
+    width: 25%;
+    height:19rem;
+    float: left;
+}
+.inner2 img{
+    width: 100%;
+    height: 19rem;
 }
 .dining{
+    margin-top: 3.5rem;
     padding-bottom: 6rem;
     border-bottom: 1px solid #b3b3b3;
 }
-.dining ul{
-    margin: 0;
-    padding-left: 0px;
-    display: flex;
-    width: 400%;
-}
-.building li{
-    width: 100%;
-    height: 19rem;
-}
-.building li img{
-    width: 100%;
-    height: 19rem;
-}
-.building div{
+.buildInfo{
     text-align: center;
 }
-.leftArrow{
-    position: absolute;
-    top: 9rem;
-    left: 0;
+.BtnArea{
+    text-align: center;
 }
-.leftArrow:hover{
+button{
     cursor: pointer;
 }
-.rightArrow{
-    position: absolute;
-    top: 9rem;
-    right: 0;
-}
-.rightArrow:hover{
-    cursor: pointer;
+button{
+    margin-top: 1.5rem;
+    width: 1.5rem;
+    height: 0.25rem;
+    margin: 0 0.3rem;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
 }
 /*events*/
 .container_event{
-    margin-top: 2rem;
-    width: 100%;
-    /* border: 1px solid blue; */
-    overflow: hidden; 
+    margin: 2rem 0;
+    padding: 0 16px;
 }
-.container_event h4{
+.container_event h3{
+    margin-top: 2.5rem;
     text-align: center;
 }
 .events{
-    width: 200%;
-    /* border: 1px solid red; */
+    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 .eachEvent{
-    width: 32%;
+    width: 100%;
     height: 22rem;
+    margin-top: 2rem;
     display: flex;
     align-items: flex-end;
+    cursor: pointer;
 }
 .eventImg_1{
     background: url('../images/event1.jpg') no-repeat 0 0;
@@ -260,7 +273,6 @@ a{
 }
 .eachEvent div{
     width: 100%;
-    bottom: 0;
     background-color:rgba(0, 0, 0, 0.4);
 }
 .eachEvent h5{
@@ -328,6 +340,10 @@ select{
     }
     .intro{
         padding: 0 16px;
+    }
+    .BtnArea{
+        position: relative;
+        bottom: 2rem;
     }
     .showcase_images{
         width: 100%;
@@ -413,10 +429,14 @@ select{
         display: block;
         clear: both;
     }
+    .room_contents{
+        padding: 0 20px;
+    }
     .room_type ul{
         justify-content: center;
         margin: 5rem 0 3rem;
-    } 
+    }
+
     .room_contents img{
         height: 28rem;
     }
@@ -426,33 +446,52 @@ select{
     .room_type li a{
         font-size: 1.2rem;
     }
+    /*캐로셀*/
     .building{
-        display: flex;
+        margin: 0 20px;
     }
     .facility{
-        flex-direction: row;
-    }
-    .dining{
-        flex-direction: row-reverse;
-        
-        margin-top: 0;
-    }
-   .buildBox{
-        width: 50%;
-        overflow: hidden;
+        height: 19rem;
     }
     .fac_box{
-        margin-right: 5%;
+        width: 50%;
+        height: 19rem;
+        float: left;
+    }
+    .fac_info{
+        float: right;
+    }
+    .facility::after{
+        content: "";
+        clear: both;
+        display: block;
+    }
+    .dining{
+        margin-top: 0;
+    }
+    .din_box{
+        width: 50%;
+        float: right;
+    }
+    .din_info{
+        width: 50%;
+        float: left;
+    }
+    .dining::after{
+        content: "";
+        clear: both;
+        display: block;
     }
     .buildInfo{
-        width:45%;
-        position: relative;
-    }
-    .building div:nth-of-type(2){
+        width:50%;
+        height: 19rem;
         text-align: left;
+        padding-left: 2rem;
+        box-sizing: border-box;
     }
     .buildInfo h4{
-        margin: 3rem 0;
+        margin-top: 3rem;
+        margin-bottom: 5rem;
     }
     .buildInfo p{
         margin-left: 1em;
@@ -463,12 +502,20 @@ select{
         position: relative;
         bottom: 0.2rem;
     }
+    .BtnArea{
+        position: relative;
+        bottom: 2rem;
+    }
     .events{
-        width: auto;
+        width: 100%;
+        flex-direction: row;
         justify-content: space-between;
     }
-    .container_event {
-        margin: 2rem 16px;
+    .eachEvent{
+        width: 32%;
+    }
+    .container_event {=
+        padding: 0 20px;
         width: auto;
     }
     footer{
@@ -492,7 +539,28 @@ select{
         font-size: 1rem;
     }
 }
-/* 아이패드 가로 */
+/*태블릿*/
+@media screen and (min-width: 1024px){
+    .container,.container2{
+        height: 24rem;
+    }
+    .fac_box{
+        height: 24rem;
+    }
+    .inner,.inner2{
+        height: 24rem;
+    }
+    .inner img, .inner2 img {
+        height: 24rem;
+    }
+    .buildInfo{
+        height: 24rem;
+    }
+    button{
+        width: 2rem;
+        height: 0.4rem;
+}
+/* 아이패드프로 가로~ */
 @media screen and (min-width:1200px){
     .intro{
         height: 35rem;
@@ -501,7 +569,7 @@ select{
         height: 32rem;
     }
     .room_type ul li {
-        width: 10%;
+        width: 7.5%;
     }
     .room_contents img {
         height: 37rem;
@@ -515,18 +583,24 @@ select{
     .building li img {
         height: 25rem;
     }
-    .leftArrow {
-        position: absolute;
-        top: 12rem;
-        left: 0;
-    }
-    .rightArrow {
-        position: absolute;
-        top: 12rem;
-        right: 0;
-    }
     .buildInfo h4 {
         margin: 5rem 0;
+        font-size: 1.2rem;
+    }
+    .fac_box {
+        height: 26rem;
+    }
+    .container, .container2{
+        height: 26rem;
+    }
+    .inner,.inner2{
+        height: 26rem;
+    }
+    .inner img, .inner2 img {
+        height: 26rem;
+    }
+    .buildInfo{
+        height: 26rem;
     }
     .dining{
         border: 0px;
@@ -561,9 +635,12 @@ select{
         clear: both;
         padding-top: 0rem;
     }
-        .events{
+    .events{
         max-width:1398px;
         margin:0 auto;
+    }
+    footer{
+        padding: 40px 20px;
     }
 }
 @media screen and (min-width:1398px){
@@ -571,9 +648,10 @@ select{
         max-width: 1398px;
         margin-left: auto;
         margin-right: auto;
+        height: 26rem;
     }
     .picture{
-        height: 65vh;
+        height: 60vh;
     }
     .index_list{
         max-width: 1398px;
@@ -594,7 +672,7 @@ select{
     }
     #footer_border{
         border-top: 1px solid #b3b3b3;
-        margin-bottom: 2rem;
+        margin: 5rem 0 2rem;
     }
     footer{
         border: 0;
