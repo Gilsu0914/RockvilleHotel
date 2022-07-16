@@ -100,7 +100,7 @@ a{
 }
 /*banner*/
 .banner{
-    height: 17.5rem;
+    height: 14rem;
     margin-top: 6rem;
     background: url('../images/history.jpg')no-repeat center;
     background-size: cover;
@@ -230,9 +230,10 @@ button{
 }
 button{
     margin-top: 1.5rem;
-    width: 1.5rem;
-    height: 0.25rem;
+    width: 1.8rem;
+    height: 0.45rem;
     margin: 0 0.3rem;
+    border-radius: 1px;
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(255, 255, 255);
 }
@@ -313,7 +314,7 @@ select{
     .navbar{
         flex-direction:column;
         align-items: flex-start;
-        padding: 10px 0px;
+        padding: 14px 0px;
     }
     .navbar_menu{
         display: none;
@@ -324,7 +325,7 @@ select{
     .navbar_menu li{
         width: 98%;
         text-align: center;
-        padding: 8px 0;
+        padding: 12px 0;
     }
     .navbar_menu li a{
         display: block;
