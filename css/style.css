@@ -574,9 +574,6 @@ select{
     .room_contents img {
         height: 37rem;
     }
-    .building{
-        max-width: 1398px;
-    }
     .building li {
         height: 25rem;
     }
@@ -646,9 +643,10 @@ select{
 @media screen and (min-width:1398px){
     .building{
         max-width: 1398px;
-        margin-left: auto;
-        margin-right: auto;
         height: 26rem;
+        padding-left:20px;
+        padding-right: 20px;
+        margin: 0 auto;
     }
     .picture{
         height: 60vh;
@@ -656,7 +654,6 @@ select{
     .index_list{
         max-width: 1398px;
         margin: auto;
-        justify-content: space-between;
         border: 0px;
     }
     #index_border{
@@ -676,7 +673,6 @@ select{
     }
     footer{
         border: 0;
-        padding: 40px 0;
         max-width: 1398px;
         margin: 0 auto;
     }
