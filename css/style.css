@@ -87,8 +87,20 @@ a{
     color: #C0443E;
 }
 .show_images{
+    animation: slide-in 1000s;
     box-shadow: 0px 0px 30px rgb(90, 90, 90);
 }
+@keyframes slide-in{
+    from{
+        transform: translateY(15%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
 .show_images.m1{
     width: 70%;
 }
@@ -111,7 +123,7 @@ a{
     align-items: center;
 }
 .banner h4{
-    text-shadow: 2px 2px 2px rgb(66, 66, 66);
+    text-shadow: 2px 2px 5px rgb(66, 66, 66);
 }
 .banner h4 a{
     color: white;
@@ -137,6 +149,10 @@ a{
     width: 20%;
     text-align: center;
     border-right: 1px solid #C0443E;
+    transition: 1s;
+}
+.room_type ul li:hover{
+    background-color: #c0443e;
 }
 .room_type li:nth-of-type(4){
     border-right: 0px;
@@ -260,6 +276,9 @@ button{
     align-items: flex-end;
     cursor: pointer;
 }
+.eachEvent:hover{
+    opacity: 0.7;
+}
 .eventImg_1{
     background: url('../images/event1.jpg') no-repeat 0 0;
     background-size: cover;
@@ -296,11 +315,16 @@ footer ul{
 .footer_info ul li a{
     color: #C0443E;
 }
+.footer_info ul li a:hover{
+    color: #d79692;
+}
 select{
     margin-top: 5.5vh;
     width: 277px;
+    height: 38px;
     padding: 0.6rem 0;
     border: 1px solid #999;
+    background-color: white;
 }
 .footer_end ul{
     display: flex;
@@ -498,6 +522,7 @@ select{
     .buildInfo h4{
         margin-top: 3rem;
         margin-bottom: 5rem;
+        font-size: 1.7rem;
     }
     .buildInfo p{
         margin-left: 1em;
@@ -547,6 +572,14 @@ select{
 }
 /*태블릿*/
 @media screen and (min-width: 1024px){
+    .room_type ul li{
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    .room_contents h4:nth-of-type(1){
+        font-size: 1.7rem;
+        margin-top: 17px;
+    }
     .container,.container2{
         height: 24rem;
     }
@@ -565,6 +598,10 @@ select{
     button{
         width: 2rem;
         height: 0.4rem;
+    }
+    .container_event h3{
+        font-size: 1.7rem;
+    }
 }
 /* 아이패드프로 가로~ */
 @media screen and (min-width:1200px){
@@ -575,7 +612,13 @@ select{
         height: 32rem;
     }
     .room_type ul li {
-        width: 7.5%;
+        width: 10%;
+    }
+    .room_type li a{
+        font-size: 1.5rem;
+    }
+    .room_contents h4:nth-of-type(1){
+        margin-top:22px;
     }
     .room_contents img {
         height: 37rem;
@@ -588,7 +631,6 @@ select{
     }
     .buildInfo h4 {
         margin: 5rem 0;
-        font-size: 1.2rem;
     }
     .fac_box {
         height: 26rem;
@@ -632,6 +674,7 @@ select{
         padding: 10px;
     }
     .view a{
+        padding: 1rem 3rem;
         color: white;
     }
     .room_contents p {
