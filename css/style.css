@@ -57,8 +57,8 @@ a{
 .picture{
     margin-top: 56px;
     width: 100%;
-    height: 14rem;
-    background:url('../images/picture5.jpg') no-repeat 0 0;
+    height: 12rem;
+    background:url('../images/picture5.jpg') no-repeat 0 20%;
     background-size: cover;
 }
 .index_list{
@@ -81,7 +81,7 @@ a{
     margin-top: 0px;
 }
 .intro p:first-child{
-    margin-top: 6.5vh;
+    margin-top: 30px;
 }
 .intro h4:nth-of-type(2){
     color: #C0443E;
@@ -163,6 +163,9 @@ a{
     font-weight: bold;
     font-size: 0.8rem;
 }
+.room_type li a:active{
+    color: rgb(75, 75, 75);
+}
 .room_contents{
     padding: 0 16px;
     position: relative;
@@ -177,11 +180,22 @@ a{
 }
 .room_contents h4:nth-of-type(1){
     float: left;
-    width: 50%;
+    width: 70%;
+}
+span{
+    padding: 0.2rem 0.8rem;
+    border-radius: 2px;
+    font-size: 0.9rem;
+}
+.twin{
+    background-color: #eddede;
+}
+.double{
+    background-color: #d5e6e8;
 }
 .view{
     float: right;
-    width: 50%;
+    width: 30%;
     text-align: right;
 }
 .view a{
@@ -414,6 +428,7 @@ select{
     .picture{
         margin-top: 0;
         height: 18rem;
+        background-position: 0% 18%;
     }
     .index_list{
         border-bottom: 1px solid #b3b3b3;
@@ -466,14 +481,14 @@ select{
     }
     .room_type ul{
         justify-content: center;
-        margin: 5rem 0 3rem;
+        margin: 3.5rem 0 1.5rem;
     }
 
     .room_contents img{
         height: 28rem;
     }
     .room_type ul li{
-        width: 12%;
+        width: 14%;
     }
     .room_type li a{
         font-size: 1.2rem;
@@ -523,7 +538,6 @@ select{
     }
     .buildInfo h4{
         margin-top: 3rem;
-        margin-bottom: 5rem;
         font-size: 1.7rem;
     }
     .buildInfo p{
@@ -575,6 +589,7 @@ select{
 /*태블릿*/
 @media screen and (min-width: 1024px){
     .room_type ul li{
+        width: 10%;
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
     }
@@ -597,6 +612,9 @@ select{
     .buildInfo{
         height: 24rem;
     }
+    .buildInfo h4{
+        margin-bottom: 4.3rem;
+    }
     button{
         width: 2rem;
         height: 0.4rem;
@@ -611,13 +629,14 @@ select{
         height: 35rem;
     }
     .picture{
-        height: 30rem;
+        height: 23rem;
+        background-position: 0% 35%;
     }
     .room_type ul li {
         width: 10%;
     }
     .room_type li a{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     .room_contents h4:nth-of-type(1){
         margin-top:22px;
@@ -700,15 +719,19 @@ select{
         margin: 0 auto;
     }
     .picture{
-        height: 45vh;
+        height: 38vh;
     }
     .index_list{
         max-width: 1398px;
         margin: auto;
         border: 0px;
     }
+    
     #index_border{
         border-bottom: 1px solid #b3b3b3;
+    }
+    .room_type ul li {
+        width: 8%;
     }
     #event_border{
         border-bottom: 1px solid #b3b3b3;
