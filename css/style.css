@@ -137,7 +137,6 @@ a{
 .room_type{
     position: relative;
     padding: 0.2em 0 3rem;
-    background-color: #fffdf0;
 }
 .room_type ul{
     margin: 3rem 0 1.5rem;
@@ -184,14 +183,13 @@ a{
 }
 span{
     padding: 0.2rem 0.8rem;
-    border-radius: 2px;
     font-size: 0.9rem;
 }
 .twin{
-    background-color: #eddede;
+    background-color: rgb(220, 220, 220);
 }
 .double{
-    background-color: #d5e6e8;
+    background-color: rgb(190, 190, 190);
 }
 .view{
     float: right;
