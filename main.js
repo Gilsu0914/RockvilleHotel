@@ -10,8 +10,8 @@ toggleBtn.addEventListener(`click`, ()=>{
 
 
 //룸 종류별 버튼을 누르면 해당 사진과 설명만 보여주는 함수
-let roomBtn = document.querySelectorAll(`.roomBtn`);
-let roomContents = document.querySelectorAll(`.room_contents`);
+const roomBtn = document.querySelectorAll(`.roomBtn`);
+const roomContents = document.querySelectorAll(`.room_contents`);
 let hideImage =()=>{ 
     for (let room_contents of roomContents ){
         room_contents.classList.remove(`visible`)
@@ -32,7 +32,7 @@ for(let i  = 0; i< roomBtn.length; i++){
 
 
 //하단 버튼 캐로셀 동작
-let topSlideBtn = document.querySelectorAll(`.TopBtn`);
+const topSlideBtn = document.querySelectorAll(`.TopBtn`);
 for( let i = 0; i< topSlideBtn.length; i++ ){
     topSlideBtn[i].addEventListener('click', ()=>{
         if(topSlideBtn[i] == 0){
@@ -45,7 +45,7 @@ for( let i = 0; i< topSlideBtn.length; i++ ){
     })
 }
 
-let bottomSlideBtn = document.querySelectorAll(`.DownBtn`);
+const bottomSlideBtn = document.querySelectorAll(`.DownBtn`);
 for(let i = 0; i<bottomSlideBtn.length; i++){
     bottomSlideBtn[i].addEventListener(`click`, ()=>{
         let value = i * 25

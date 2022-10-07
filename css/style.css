@@ -152,7 +152,9 @@ a{
     border-right: 1px solid #C0443E;
     cursor: pointer;
 }
-
+.room_type li:nth-of-type(1){
+    background-color: #da7f7c;
+}
 .room_type li:nth-of-type(4){
     border-right: 0px;
 }
