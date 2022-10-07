@@ -150,11 +150,9 @@ a{
     width: 20%;
     text-align: center;
     border-right: 1px solid #C0443E;
-    transition: 1s;
+    cursor: pointer;
 }
-.room_type ul li:hover{
-    background-color: #c0443e;
-}
+
 .room_type li:nth-of-type(4){
     border-right: 0px;
 }
